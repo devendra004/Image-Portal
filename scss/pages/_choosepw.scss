@@ -1,0 +1,37 @@
+/*========== Start choosepw styles ==========*/
+.pw-error-msg {
+    display: none;
+    position: relative;
+    padding: 13px 9px;
+    margin: 5px 0px 10px;
+    background: #fffafa;
+    border: 1px solid #ffe5e5;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #c97171;
+    
+    i {
+        position: absolute;
+        right: 13px;
+        top: 17px;
+        width: 8px;
+        height: 8px;
+        @include sprite-sprite(form-error-x, false, 0px, 0px);
+        cursor: pointer;
+    }
+}
+/*========== End choosepw styles ==========*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    
+    .pw-error-msg {
+      
+        i {
+            background: url('../img/retina/form-error-x@2x.png') no-repeat;
+        }
+    }  
+}

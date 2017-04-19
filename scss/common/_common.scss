@@ -1,0 +1,579 @@
+/*========== Start main styles ==========*/
+#wrapper {
+    position: relative;
+    min-height: 100%;
+    background: #f8f9fa;
+}
+
+.floating-wrapper{
+    display: none
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    -webkit-appearance: none;
+}
+
+.mobile-load {
+    color: #a9abac;
+    
+    &:hover {
+        color: #a9abac;
+    }
+    
+    &:focus, &:active {
+        text-decoration: none;
+    }
+}
+
+#section {
+    padding-bottom: 85px;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: #1e2124;
+}
+
+html {
+    height: 100%;
+}
+
+a.general-link{
+    color: #429ddc;
+    font-size: 14px;
+    &:hover{
+        color: #6eafe2;
+        text-decoration: none;
+    }
+}
+
+.colored-bg-1 {
+    background: #f8f9fa;
+}
+
+.colored-bg-2 {
+    background: #222527;
+}
+
+.colored-bg-3 {
+    background: #fff;
+}
+
+.home-title {
+    font-weight: 300;
+    font-size: 26px;
+    color: #34393d;
+}
+
+.page-title {
+    font-weight: 300;
+    font-size: 22px;
+    color: #34393d;
+}
+
+::-webkit-input-placeholder {
+ font-weight: 400;
+ font-size: 12px;
+ color: #969799;
+ text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ font-weight: 400;
+ font-size: 12px;
+ color: #969799;
+ text-transform: uppercase; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ font-weight: 400;
+ font-size: 12px;
+ color: #969799;
+ text-transform: uppercase;  
+}
+
+:-ms-input-placeholder {  
+ font-weight: 400;
+ font-size: 12px;
+ color: #969799;
+ text-transform: uppercase; 
+}
+
+input:focus::-webkit-input-placeholder {
+ font-weight: 400;
+ font-size: 12px;
+ color: #bebfbf;
+}
+
+input:focus:-moz-placeholder { /* Firefox 18- */
+ font-weight: 400;
+ font-size: 12px;
+ color: #bebfbf;
+}
+
+input:focus::-moz-placeholder {  /* Firefox 19+ */
+ font-weight: 400;
+ font-size: 12px;
+ color: #bebfbf;
+}
+
+input:focus:-ms-input-placeholder {  
+ font-weight: 400;
+ font-size: 12px;
+ color: #bebfbf;
+}
+
+#overlay {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  display: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+input[type="text"], input[type="email"] {
+   
+    &:focus {
+        border: 1px solid #c7dcec;
+        @include box-shadow(#c7dcec 0px 0px 5px);
+    }
+}
+
+#section.general-box-wrapper .filter-settings {
+    padding: 0px;
+    display: none;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/* Customized default checkbox
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding: 3px 0px 3px 19px;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    @include border-radius(1px);
+    border: 1px solid #dfe3e6;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    @include sprite-sprite(checkmark, false, 0px, 0px);
+    @include border-radius(1px);
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[type="checkbox"]:checked + label {
+    color: #3597d3;
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/* Customized default radio button
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+    position: relative;
+    padding: 0px 0px 0px 17px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+[type="radio"]:checked + label {
+    color: #3597d3 !important;
+}
+
+/* checkbox aspect */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    @include border-radius(7px);
+    border: 1px solid #dfe3e6;
+}
+
+/* checked mark aspect */
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    @include sprite-sprite(radio-dot, false, 3px, 3px);
+    @include border-radius(7px);
+}
+
+/* checked mark aspect changes */
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[type="radio"]:checked + label {
+    color: #3597d3;
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+}
+
+[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+/*========== End main styles ==========*/
+
+/*========== Start main button styles ==========*/
+.btn {
+    padding: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    @include border-radius(2px);
+    text-align: center;
+    border: 0px;
+    
+    &:hover, &:focus, &:active {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    &.blue-btn {
+        @include background-image(linear-gradient(#3498db, #3483db));
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#3483db',GradientType=1 );
+        
+        &:hover {
+            @include background-image(linear-gradient(#5dace2, #5d9ce2));
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dace2', endColorstr='#5d9ce2',GradientType=1 );
+        }
+    }
+    
+    &.black-btn {
+        background-color: #333333;
+        
+        &:hover {
+            background: #5c5c5c;
+        }
+    }
+
+    &.grey-btn {
+        background-color: #9d9d9d;
+        
+        &:hover {
+            background: #bebebe;
+        }
+    }
+    
+    &.orange-btn {
+        @include background-image(linear-gradient(#ff6242, #ff5040));
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6242', endColorstr='#ff5040',GradientType=1 );
+        
+        &:hover {
+            @include background-image(linear-gradient(#fd8a79, #ff7b67));
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd8a79', endColorstr='#ff7b67',GradientType=1 );
+        }
+    }
+    
+    &.share-btn {
+        position: relative;
+        margin: 0px 0px 0px 35px;
+        padding: 10px 12px 8px 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #3498db;
+        min-width: 70px;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 11px;
+            width: 15px;
+            height: 15px;
+            @include sprite-sprite(share-btn-icon, false, 0px, 0px);
+        }
+        
+        &:hover {
+            font-weight: bold;
+        }
+        
+        &:active, &:focus {
+            outline: none;
+            @include box-shadow(none);
+        }
+    }
+    
+    &.save-btn {
+        position: relative;
+        margin: 0px 0px 0px 35px;
+        padding: 10px 12px 8px 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #3498db;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 9px;
+            width: 14px;
+            height: 16px;
+            @include sprite-sprite(save-btn-icon, false, 0px, 0px);
+        }
+        
+        &:hover {
+            text-decoration: none;
+            opacity: .8;
+        }
+        
+        &:active, &:focus {
+            outline: none;
+            @include box-shadow(none);
+        }
+    }
+}
+/*========== End main button styles ==========*/
+
+/*========== Start page-pagination ==========*/
+.page-pagination {
+    float: right;
+    margin: 17px 0px 0px 0px;
+    
+    li {
+        float: left;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 25px;
+        color: #a9abac;
+        
+        a {
+            font-weight: 400;
+            font-size: 13px;
+            color: #a9abac;
+            
+            span {
+                display: block;
+                width: 6px;
+                height: 23px;
+            }
+        }
+        
+        .current {
+            display: block;
+            padding: 0px 8px 0px 8px;
+            margin: 0px 3px 0px 0px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 24px;
+            color: #7c7f81;
+            background: #fff;
+            border: 1px solid #d6dbde;
+            @include border-radius(2px);
+        }
+        
+        .prev {
+            margin: 0px 10px 0px 0px;
+            @include sprite-sprite(left-pag-activ, false, 0px, 7px);
+        }
+        
+        .next {
+            margin: 0px 0px 0px 10px;
+            @include sprite-sprite(right-pag-activ, false, 0px, 7px);
+        }
+        
+        &.disabled {
+
+            a {
+                cursor: default;
+            }
+            
+            .prev {
+                @include sprite-sprite(left-pag-inactiv, false, 0px, 7px);
+            } 
+            
+            .next {
+                @include sprite-sprite(right-pag-inactiv, false, 0px, 7px);
+            } 
+        }
+    }
+}
+/*========== End page-pagination ==========*/
+
+.dd-options {
+
+    li {
+        border-bottom: 1px solid #e4e8eb;
+        
+        &:last-child {
+            border-bottom: 0px;
+        }
+        
+        .dd-option {
+
+            &:hover {
+                background: #f8f9fa;
+            }
+        }
+        
+        a {
+            position: relative;
+        }
+    }
+}
+
+/*== Form Validation common styles ==*/
+.help_block {
+    display: none !important;
+}
+
+input.has_error {
+    border: 1px solid red !important;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .filter-inner [type="checkbox"]:not(:checked) + label:after,
+    .filter-inner [type="checkbox"]:checked + label:after,
+    .filter-field [type="checkbox"]:not(:checked) + label:after,
+    .filter-field [type="checkbox"]:checked + label:after {
+        background: url('../img/retina/checkmark-mobile@2x.png') no-repeat;
+        background-size: contain;
+    }
+    
+    .filter-inner [type="radio"]:not(:checked) + label:after,
+    .filter-inner [type="radio"]:checked + label:after,
+    .filter-field [type="radio"]:not(:checked) + label:after,
+    .filter-field [type="radio"]:checked + label:after {
+        background: url('../img/retina/radio-dot-mobile@2x.png') no-repeat;
+        background-size: 6px;
+        background-position: center center;
+        top: 2px;
+        left: 0px;
+    }
+    
+    .btn {
+
+        &.share-btn {
+
+            &:after {
+                background: url('../img/retina/share-btn-icon@2x.png') no-repeat;
+                background-size: 15px;
+            }
+            
+        }
+    }
+    
+    .page-pagination {
+
+        li {
+
+            .prev {
+                background: url('../img/retina/left-pag-activ@2x.png') no-repeat 0px 8px;
+            }
+            
+            .next {
+                background: url('../img/retina/right-pag-activ@2x.png') no-repeat 0px 8px;
+            }
+            
+            &.disabled {
+
+                .prev {
+                    background: url('../img/retina/left-pag-inactiv@2x.png') no-repeat 0px 8px;
+                } 
+                
+                .next {
+                    background: url('../img/retina/right-pag-inactiv@2x.png') no-repeat 0px 8px;
+                } 
+            }
+        }
+    }
+}

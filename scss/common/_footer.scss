@@ -1,0 +1,128 @@
+/*========== Start footer styles ==========*/
+#footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    height: 85px;
+    background: #1e2124;
+}
+
+.main-footer {
+    padding: 33px 0px;
+    
+    #footer-logo {
+        float: left;
+        margin: 0px 30px 0px 0px;
+    }
+    
+    .main-footer-nav {
+        float: left;
+        margin: 0px 0px 0px 0px;
+        
+        li {
+            float: left;
+            margin-right: 28px;
+            
+            a {
+                display: block;
+                font-weight: 400;
+                font-size: 14px;
+                color: #969799;
+                text-transform: uppercase;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    .language-container {
+        float: left;
+        width: 90px;
+        
+        p {
+            float: left;
+            margin: 0px 0px 0px 0px;
+            font-weight: 400;
+            font-size: 14px;
+            color: #969799;
+            text-transform: uppercase;
+        }
+        
+        .footer-language {
+            float: left;
+            max-width: 40px;
+            margin: 3px 0px 0px 0px;
+            
+            .dd-select {
+                margin: 0px;
+                @include box-shadow(none);
+                
+                a {
+                    @include box-shadow(none);
+                    padding: 0px;
+                }
+            }
+            
+            .dd-pointer-down {
+                border: solid 4px transparent;
+                border-top: solid 4px #4c4e4f;
+                
+                &.dd-pointer-up {
+                    border: solid 4px transparent !important;
+                    border-bottom: solid 4px #4c4e4f !important;
+                }
+            }
+            
+            .dd-options {
+                @include box-shadow(none);
+                background: transparent;
+                bottom: 20px;
+                
+                &:before, &:after {
+                    display: none;
+                }
+                
+                .dd-option {
+                    padding: 7px 0px;
+                    background: transparent;
+                }
+                
+                li {
+                    border: 0px;
+                    
+                    .dd-option-selected {
+                        display: none;
+                    }
+                    
+                    a {
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    
+    .copyright-footer {
+        float: right;
+        margin: 0px;
+        padding: 0px 0px 0px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #969799;
+    }
+}
+/*========== End footer styles ==========*/
+
+@media only screen and (min-width : 900px) and (max-width : 1367px) {
+
+    .main-footer .main-footer-nav li a{
+        font-size: 13px;
+    }
+
+    .main-footer .main-footer-nav li{
+        margin-right: 10px;
+    }
+}

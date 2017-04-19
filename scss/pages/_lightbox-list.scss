@@ -1,0 +1,59 @@
+/*========== Start Styles ==========*/
+.lightbox-wrapper{
+	.title-wrapper{
+		margin-bottom: 22px;
+		.btn{
+			padding: 8px 14px;
+			font-weight: 400;
+		}
+	}
+
+	.new-lightbox-wrapper{
+		position: relative;
+	}
+}
+
+.create-lightbox {
+	
+	figure{
+		background: $white;
+	}
+
+	&.active{
+		p{
+			font-weight: bold;
+		}
+	}
+}
+
+.lightbox-dropdown{
+	display: none;
+	position: absolute;
+	right: 50%;
+	margin-right: - 135px;
+	z-index: 1;
+	margin-top: 5px;
+}
+
+/*========== End Styles ==========*/
+
+@media only screen and (min-width : 0px) and (max-width : 767px) {
+
+	.lightbox-dropdown {
+		left: 10px;
+		right: 10px;
+		width: auto;
+		margin-right: 0;
+	}
+
+}
+
+@media only screen and (min-width : 0px) and (max-width : 400px) {
+	.general-dropdown .general-dropdown-inner ul li input[type="text"],
+	.general-dropdown .general-dropdown-inner ul li .btn
+	{
+		display: block;
+		width: 100%;
+		clear: both;
+	}
+}

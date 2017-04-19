@@ -1,0 +1,211 @@
+/*========== End styles ==========*/
+
+body.fancybox-opened{
+	overflow: hidden!important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#fancybox-content-1{
+	display: none;
+	overflow: hidden;
+
+	&:after{
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0;
+		left: 0;
+		height: 100%;
+		right: 0; 
+		z-index: 99999;
+		background: #333333;
+		opacity: 1;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&.opened{
+		&:after{
+			opacity: 0;
+			height: 0;
+		}
+	}
+
+	.slider-container{
+		width: calc(100% - 290px);
+		float: left;
+		overflow: hidden;
+		position: relative;
+
+		.slick-slider{
+			height: 100%;
+			background: #2d2e2e;
+		}
+
+		.slick-slide{
+			overflow: hidden;
+		}
+
+		.slick-list,
+		.slick-track {
+			height: 100%;
+		}
+
+
+	}
+
+	.edit-filter-container{
+		width: 290px;
+		float: left;
+		background: #fff;
+		.edit-filter{
+			border: 0;
+		}
+	}
+
+	.slider-1 .slick-slide img{
+		position: relative;
+		display: block;
+		width: auto;
+		height: 100%;
+		vertical-align: top;
+		margin: 0 auto;
+	}
+
+	.slider-1 button{
+		position: absolute;
+		top: 50%;
+		margin-top: -19px;
+		height: 40px;
+		width: 40px;
+		font-size: 0;
+		text-indent: -9999px;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 38px;
+	}
+
+	.slider-1 button.slick-prev{
+		left: 20px;
+		background-image: url('../img/arrow-left.png');
+	}
+
+	.slider-1 button.slick-next{
+		right: 20px;;
+		background-image: url('../img/arrow-right.png');
+	}
+
+	.scrollbar-wrapper{
+		overflow-y: scroll;
+		outline: none;
+	}
+
+
+}
+
+.fancybox-overlay{
+	background: rgba(0,0,0,0.9);
+}
+
+.fancybox-close {
+	top: -25px;
+	right: -25px;
+	width: 17.5px;
+	height: 17.5px;
+	background: url('../img/close-white.png') center center no-repeat;
+	background-size: 17.5px;
+}
+
+.fancybox-opened .fancybox-skin{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background: transparent;
+}
+
+@media only screen and (min-width : 767px) and (max-width : 1300px) {
+
+	#fancybox-content-1{
+		.slider-container{
+			width: 70%;
+		}
+
+		.edit-filter-container{
+			width: 30%;
+		}
+
+	}
+	
+}
+
+
+
+@media only screen and (min-width : 0px) and (max-width : 1024px) {
+	#fancybox-content-1{
+
+		.slider-container{
+			width: 100%;
+			float: none;
+			padding: 10px;
+			background: transparent;
+
+			.slick-list,
+			.slick-track {
+				max-height: 480px;
+			}
+		}
+
+		.edit-filter-container{
+			width: 100%;
+			float: none;
+		}
+
+		.slider-1 .slick-slide img{
+			width: 100%;
+			height: auto;
+		}
+
+		.scrollbar-wrapper{
+			overflow-y: initial;
+		}
+
+		.slider-1 button{
+			display: none!important;
+		}
+	}
+
+	.fancybox-opened{
+
+		width: 100%!important;
+		left: 0!important;
+		right: 0!important;
+	}
+
+	.fancybox-outer,
+	.fancybox-inner{
+		width: 100%!important;
+		background: transparent!important;
+	}
+
+	.fancybox-close {
+		top: -25px;
+		right: 25px;
+	}
+
+
+}
+
+@media only screen and (min-width : 0px) and (max-width : 767px) {
+	.edit-filter .lightbox-download-option {
+		margin-bottom: 0px;
+	}
+
+	.edit-filter .ui-elements {
+		padding: 10px 20px 0;
+	}
+
+}

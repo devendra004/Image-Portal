@@ -1,0 +1,77 @@
+/*======= Start lightbox-inner =======*/ 
+.lightbox-detail-wrapper {
+    position: relative;
+    
+    .page-title {
+        margin: 0px;
+        padding-bottom: 13px;
+        margin-top: 5px;
+    }
+    
+    .filter-inner {
+        top: 53px;
+    }
+}
+
+.lightbox-inner {
+    text-align: center;
+    margin: 0px 10px 20px 10px;
+    width: 280.5px;
+    float: left;
+    position: relative;
+    
+    a {
+        display: block;
+    }
+    
+    figure {
+        display: table;
+        width: 100%;
+        height: 134px;
+        border: 1px solid #ebeff2;
+        
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+            img{
+                -moz-transform: scale(0.8);
+                -ms-transform: scale(0.8);
+                -webkit-transform: scale(0.8);
+                transform: scale(0.8);
+            }
+        }
+    }
+    
+    a {
+        outline: none;
+        p {
+            margin: 10px 0px;
+            font-weight: 400;
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: underline;
+            letter-spacing: 1px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        &:hover {
+            text-decoration: none;
+            p {
+                font-weight: bold;
+            }
+        }
+    }
+}
+/*======= end lightbox-inner =======*/ 
+
+@media only screen and (min-width : 0px) and (max-width : 767px) {
+    .general-dropdown.lightbox-dropdown .general-dropdown-inner:after {
+       left: initial;
+       right: 50%;;
+   }
+}

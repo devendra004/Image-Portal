@@ -1,0 +1,26 @@
+/*========== Start message-text-content ==========*/
+.message-text-content {
+    margin: 82px 0px 37px;
+    padding: 113px 110px 105px;
+    background-color: #fff;
+    border: 1px solid #ebeff2;
+    
+    h1 {
+        margin-bottom: 0px;
+        padding-bottom: 30px;
+        font-weight: 300;
+        font-size: 26px;
+        color: #34393d;
+        text-align: center;
+    }
+    
+    > p {
+        margin: 0 0 35px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #6a6f72;
+        line-height: 21px;
+    }
+}
+/*========== End message-text-content ==========*/

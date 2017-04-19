@@ -1,0 +1,179 @@
+/*======= Start account-wrapper =======*/
+#section.account-wrapper {
+    position: relative;
+    padding: 80px 0px 170px;
+    
+    .filter-settings {
+        padding: 0px;
+        display: none;
+    }
+    
+    .filter-inner {
+        top: 53px;
+    }
+}
+
+.account-form-inner {
+    width: 100%;
+    padding: 75px 114px 50px;
+    background: #fff;
+    border: 1px solid #ebeff2;
+    
+    h1 {
+        margin: 0px;
+        padding-bottom: 36px;
+        font-weight: 300;
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    figure {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        overflow: hidden;
+        @include border-radius(50px);
+        
+    }
+    
+    .photo-upload {
+        position: relative;
+        overflow: hidden;
+        max-width: 140px;
+        margin: 18px auto 33px;
+        cursor: pointer;
+        
+        span {
+            display: block;
+            text-align: center;
+            font-weight: 400;
+            font-size: 12px;
+            color: #3498db;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        &:hover {
+            
+            span {
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+        
+        .upload {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    
+    .dd-container {
+        margin-bottom: 10px;
+    }
+    
+    .dd-select {
+        margin: 0px;
+        @include box-shadow(none);
+        border: 1px solid #e4e8eb;
+        
+        a {
+            padding: 15px 10px 12px;
+            font-weight: 400;
+            font-size: 12px;
+            color: #969799;
+            text-transform: uppercase;
+            @include box-shadow(none);
+            
+            &.active {
+                color: #4a4e51;
+            }
+            
+            label {
+                margin-bottom: 0px;
+                font-weight: 400;
+                color: #4a4e51;
+            }
+        }
+        
+        .dd-pointer-down {
+            border: solid 4px transparent;
+            border-top: solid 4px #7c7f81;
+            
+            &.dd-pointer-up {
+                border: solid 4px transparent !important;
+                border-bottom: solid 4px #7c7f81 !important;
+            }
+        }
+    }
+    
+    .dd-options {
+        @include box-shadow(none);
+        border: 1px solid #e4e8eb;
+        background: #fff;
+        
+        &:before, &:after {
+            display: none;
+        }
+        
+        li {
+            border-bottom: 1px solid #e4e8eb;
+            
+            &:last-child {
+                border-bottom: 0px;
+            }
+        }
+        
+        label {
+            font-weight: 400;
+            font-size: 12px;
+            color: #4a4e51;
+        }
+    }
+    
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        height: 44px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        border: 1px solid #e4e8eb;
+        outline: none;
+        font-weight: 400;
+        color: #4a4e51;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 30px 0px;
+        padding: 12px 12px 10px;
+    }
+}
+
+.delete-account-btn {
+    display: block;
+    max-width: 110px;
+    margin: 40px auto;
+    font-weight: 400;
+    font-size: 12px;
+    color: #dc4d33;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    
+    &:hover {
+        color: #dc4d33;
+        text-decoration: none;
+    }
+    
+    &:focus {
+       color: #dc4d33; 
+    }
+}
+/*======= End account-wrapper =======*/ 

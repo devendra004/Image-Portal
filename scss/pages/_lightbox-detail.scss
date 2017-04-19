@@ -1,0 +1,280 @@
+/*========== Start lightbox-detail-inner ==========*/
+.lightbox-detail-wrapper {
+    padding-top: 22px;
+
+    .col-md-7 {
+        width: 58.34%;
+    }
+
+    .col-md-5 {
+        width: 41.66%;
+    }
+
+    .filter-settings {
+        display: none;
+        height: 53px;
+    }
+}
+
+.single-multiple{
+    padding-bottom: 50px;
+}
+
+.lightbox-detail-inner {
+    width: 100%;
+    overflow: hidden;
+
+    .result-item {
+        margin-bottom: 10px;
+        cursor: pointer;
+        width: 32%;
+
+        > a > img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: bottom;
+        }
+    }
+
+    .result-item.filter-result{
+        margin-bottom: 17px;
+        width: 48.5%;
+        max-width: 100%;
+        &.upload{
+            margin-bottom: 18px;
+            width: 32%;
+        }
+    }
+
+    .gutter-size {
+        width: 1.5%;
+    }
+
+    &.filter{
+        .gutter-size {
+            width: 3%;
+        }
+    }
+
+    &.myphoto-upload{
+        .gutter-size {
+            width: 2%;
+        }
+    }
+}
+/*-- Start lightbox-download-option --*/
+.lightbox-download-option {
+
+    h2 {
+        margin: 0px;
+        padding: 2px 0px 25px 0px;
+        font-weight: 500;
+        font-size: 18px;
+        color: #34393d;
+        letter-spacing: 1px;
+
+        small {
+            font-weight: 400;
+            font-size: 18px;
+            color: #b0b1b2;
+        }
+    }
+
+    h3 {
+        margin: 0px;
+        font-weight: 400;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #a9abac;
+        letter-spacing: 1px;
+    }
+
+    .blue-btn {
+        padding: 13px 27px 11px;
+    }
+
+    > table {
+        width: 100%;
+        margin: 12px 0px 20px;
+        border-top: 1px solid #ebeff2;
+
+
+        tr {
+            border-bottom: 1px solid #ebeff2;
+            cursor: pointer;
+
+            &.checked {
+                background: #fff;
+
+                td {
+                    p {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            td {
+                padding: 10px 0px;
+                text-align: center;
+
+                &:first-child {
+                    width: 110px;
+                    padding-left: 10px;
+                    text-align: left;
+                }
+
+                &:nth-child(2) {
+                    width: 110px;
+                }
+
+                &:nth-child(3) {
+                    width: 170px;
+                }
+
+                &:last-child {
+                    width: 93px;
+                    padding-right: 10px;
+                    text-align: right;
+                }
+
+                p {
+                    float: left;
+                    margin: 0px;
+                    padding-left: 5px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #34393d;
+                }
+
+                span {
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: #a9abac;
+                }
+
+                label {
+                    float: left;
+                }
+
+                [type="radio"]:not(:checked) + label:before, [type="radio"]:checked + label:before {
+                    top: 3px;
+                }
+
+                [type="radio"]:not(:checked) + label:after, [type="radio"]:checked + label:after {
+                    top: 3px;
+                }
+            }
+        }
+    }
+}
+/*-- End lightbox-download-option --*/
+
+/*========== End lightbox-detail-inner ==========*/
+
+.delete-lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, 0.6);
+    z-index: 999;
+
+    .mobile-padding{
+        position: absolute;
+        top: 22%;
+        left: 0;
+        right: 0;
+        padding: 10px; 
+    }
+
+    .delete-lightbox-inner{
+        max-width: 580px;
+        margin: 0 auto;
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .delete-content{
+        padding: 21px 23px;
+    }
+
+    .button-wrapper{
+        background: #ebeff2; 
+        padding: 24px;
+    }
+
+    h2{
+        font-size: 22px;
+        color: $blue;
+        font-weight: 400;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f4f6f8;
+    }
+
+    p{
+        padding: 30px 3px 23px;
+        font-size: 17px;
+        letter-spacing: -1px;
+        line-height: 25px;
+        color: #34393d;
+    }
+
+    .btn{
+        padding: 8px 40px;
+    }
+
+    .black-btn{
+        margin-left: 18px;
+    }
+}
+
+
+@media only screen and (min-width : 1024px) and (max-width : 1367px) {
+
+    .lightbox-detail-inner .result-item.filter-result{
+        margin-bottom: 13px;
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1023px) {
+    .lightbox-detail-inner .result-item.filter-result{
+        margin-bottom: 29px;
+    }
+}
+
+
+@media only screen and (min-width : 0px) and (max-width : 767px) {
+
+    .lightbox-detail-inner .result-item.filter-result{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #section.lightbox-detail-wrapper .lightbox-detail {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .delete-lightbox .btn {
+        padding: 12px 36px;
+    }
+
+    .delete-lightbox .delete-content {
+        padding: 20px 15px;
+    }
+
+    .delete-lightbox .button-wrapper {
+        padding: 15px;
+    }
+
+    .delete-lightbox .button-wrapper .cancel-button{
+        float: left!important
+    }
+}
+
